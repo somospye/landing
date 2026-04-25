@@ -1,46 +1,50 @@
-# Astro Starter Kit: Basics
+# pye-landing
+
+Landing page de la comunidad **Programadores y Estudiantes** (PyE).
+Construido con [Astro](https://astro.build) y [Tailwind CSS](https://tailwindcss.com).
+
+## Desarrollo
 
 ```sh
-pnpm create astro@latest -- --template basics
+pnpm install
+pnpm dev          # http://localhost:4321
+pnpm build
+pnpm preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> El lockfile es `pnpm-lock.yaml`. Si preferís otro package manager, regenerá el lock correspondiente.
 
-## 🚀 Project Structure
+## Deploy con Docker
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```sh
+./run.sh          # build + run, expone http://localhost:4321
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+O manualmente:
 
-## 🧞 Commands
+```sh
+docker build -t somospye-landing .
+docker run -d -p 4321:80 somospye-landing
+```
 
-All commands are run from the root of the project, from a terminal:
+## Estructura
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+```
+src/
+  components/    # Cover, Welcome, Carousel, Goals, Contact, CTA
+  layouts/       # Layout base
+  pages/         # index.astro
+  styles/
+public/          # assets estáticos
+```
 
-## 👀 Want to learn more?
+## Stack
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Astro 5
+- Tailwind CSS 4
+- TypeScript
+- Nginx (runtime, vía Docker)
+
+## Contribuir
+
+Issues y PRs bienvenidos. Para cambios grandes, abrí primero un issue para alinear scope.
