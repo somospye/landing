@@ -1,6 +1,6 @@
 # Guía de Contribución
 
-¡Bienvenido a la guía de contribución de **Pingou**!
+¡Bienvenido a la guía de contribución de nuestra **Landing Page**!
 Antes de comenzar, asegurate de leer y seguir todas las instrucciones de este documento para que tu colaboración pueda integrarse sin problemas.
 
 ---
@@ -12,8 +12,8 @@ Antes de comenzar, asegurate de leer y seguir todas las instrucciones de este do
 2. **Clona tu fork en local**:
 
 ```bash
-git clone https://github.com/TU_USUARIO/pingou
-cd pingou
+git clone https://github.com/TU_USUARIO/landing
+cd landing
 ```
 
 3. **Instala las dependencias**:
@@ -54,16 +54,16 @@ tipo(ámbito): descripción corta
 - `style`: Formato, punto y coma, etc.
 - `refactor`: Refactorización de código
 - `perf`: Mejora de rendimiento
-- `chore`: Cambios que no afectan al funcionamiento del bot
+- `chore`: Cambios que no afectan al funcionamiento de la web
 
 ### Ejemplos
 
 ```
-feat(moderation): add warn command
+feat(navbar): add new navigation link
 
-Agrega el comando !warn para que los moderadores puedan advertir a los usuarios.
+Add the new navigation link 'About' to the navbar.
 
-BREAKING CHANGE: Se eliminó el comando !kick
+BREAKING CHANGE: Added a new link to the navbar
 ```
 
 ---
