@@ -1,0 +1,68 @@
+---
+export interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	canonicalURL?: string;
+	type?: 'website' | 'article';
+}
+
+const {
+	title: pageTitle,
+	description,
+	image,
+	canonicalURL,
+	type = 'website',
+} = Astro.props;
+
+import { SITE, ORGANIZATION } from '../config';
+
+const title = pageTitle ? `${pageTitle} | ${SITE.title}` : SITE.title;
+const desc = description || SITE.description;
+const ogImage = image || SITE.ogImage;
+const url = canonicalURL || SITE.url;
+---
+
+<!-- Primary meta -->
+<title>{title}</title>
+<meta name="description" content={desc} />
+<meta name="author" content={SITE.author} />
+<meta name="language" content={SITE.locale} />
+<link rel="canonical" href={url} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={desc} />
+<meta property="og:image" content={ogImage.startsWith('http') ? ogImage : `${SITE.url}${ogImage}`} />
+<meta property="og:locale" content={SITE.locale} />
+<meta property="og:site_name" content={SITE.title} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={desc} />
+<meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `${SITE.url}${ogImage}`} />
+<meta name="twitter:site" content={SITE.twitter} />
+<meta name="twitter:creator" content={SITE.twitter} />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	name: ORGANIZATION.name,
+	description: ORGANIZATION.description,
+	url: ORGANIZATION.url,
+	logo: ORGANIZATION.logo,
+	sameAs: ORGANIZATION.sameAs,
+})} />
+
+<script type="application/ld+json" set:html={JSON.stringify({
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: SITE.title,
+	description: SITE.description,
+	url: SITE.url,
+})} />

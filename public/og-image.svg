@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+	<rect width="1200" height="630" fill="#008bf9"/>
+	<text x="600" y="270" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800" fill="white" text-anchor="middle" letter-spacing="2">Somos PyE</text>
+	<text x="600" y="340" font-family="Inter, Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.9)" text-anchor="middle">Programadores y Estudiantes</text>
+	<text x="600" y="390" font-family="Inter, Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.7)" text-anchor="middle">Comunidad de habla hispana</text>
+	<path d="M 560,480 Q 600,520 640,480 Q 600,540 560,480 Z" fill="rgba(255,255,255,0.15)"/>
+	<path d="M 320,560 Q 600,620 880,560" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+</svg>
