@@ -1,46 +1,22 @@
-# Astro Starter Kit: Basics
+<img src="https://github.com/somospye/.github/blob/e0ab2bf61b679d7746e5c1114baa5f37c354d778/assets/pyebanner.png" />
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+## Somos la comunidad hispana más grande de **programación** y **estudio** en Discord. [¡Siéntase bienvenido/a!](https://discord.gg/programacion) 😄
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<div align="center">
+  <h1>Landing Page</h1>
+  <p>Landing page para Programadores y Estudiantes.</p>
 
-## 🚀 Project Structure
+[![Discord](https://img.shields.io/discord/768278151435386900?color=5865F2&label=Discord&logo=discord&logoColor=white)](https://discord.gg/programacion)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Inside of your Astro project, you'll see the following folders and files:
+</div>
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+---
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Contribuir
 
-## 🧞 Commands
+¡Las contribuciones son bienvenidas! Si quieres ayudar a mejorar la landing page de nuestra comunidad, revisa nuestra [Guía de Contribución](./CONTRIBUTING.md).
 
-All commands are run from the root of the project, from a terminal:
+## Licencia
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Este proyecto está bajo la [Licencia MIT](./LICENSE).
