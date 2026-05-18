@@ -1,16 +1,29 @@
 {
-  "name": "somospye-landing",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.16.0",
-    "tailwindcss": "^4.1.17"
-  }
+	"name": "somospye-landing",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint . --write",
+		"format": "biome format . --write",
+		"format:check": "biome format .",
+		"check": "biome check .",
+		"prepare": "lefthook install"
+	},
+	"dependencies": {
+		"@commitlint/cli": "^21.0.1",
+		"@commitlint/config-conventional": "^21.0.1",
+		"@tailwindcss/vite": "^4.1.17",
+		"astro": "^5.16.0",
+		"tailwindcss": "^4.1.17"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.15",
+		"lefthook": "^2.1.6",
+		"lint-staged": "^17.0.5"
+	}
 }
